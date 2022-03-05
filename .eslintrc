@@ -1,35 +1,43 @@
 {
-    "env": {
-        "es6": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
+	"env": {
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react"
+	],
+	"rules": {
 		"no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": ["error"],
+		"@typescript-eslint/no-use-before-define": [
+			"error"
+		],
 		"no-unused-vars": "off",
-		"@typescript-eslint/no-unused-vars": ["error"],
-        "indent": [2, 2],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
+		"@typescript-eslint/no-unused-vars": [
+			"error"
+		],
+		"no-use-before-declare": true,
+		"indent": [
+			2,
+			2
+		],
+		"linebreak-style": [
+			"error",
+			"windows"
+		],
+		"quotes": [
+			"error",
+			"double"
+		],
+		"semi": [
+			"error",
+			"always"
+		]
+	}
 }
