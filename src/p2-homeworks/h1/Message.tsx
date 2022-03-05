@@ -5,7 +5,7 @@ type MessageType = {
    avatar: string,
    name: string,
    message: string,
-   time: string,
+   time:string,
 }
 
 function Message(props: MessageType) {
