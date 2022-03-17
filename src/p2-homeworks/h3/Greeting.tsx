@@ -13,7 +13,7 @@ type GreetingPropsType = {
 const Greeting: React.FC<GreetingPropsType> = (
 	{ name, setNameCallback, addUser, error, totalUsers } // деструктуризация пропсов
 ) => {
-	let inputClass = s.error// need to fix with (?:)
+	let inputClass = s.error // need to fix with (?:)
 
 	const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
 		if (e.key === "Enter") addUser() // Если нажата клавиша Энтер, вызвать функцию нажатия на кнопку
