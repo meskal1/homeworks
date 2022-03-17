@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/meskal1.github.io/static/css/main.4acd6f20.css",
-    "main.js": "/meskal1.github.io/static/js/main.c35661dc.js",
-    "index.html": "/meskal1.github.io/index.html",
-    "main.4acd6f20.css.map": "/meskal1.github.io/static/css/main.4acd6f20.css.map",
-    "main.c35661dc.js.map": "/meskal1.github.io/static/js/main.c35661dc.js.map"
+    "main.css": "/static/css/main.4acd6f20.css",
+    "main.js": "/static/js/main.c35661dc.js",
+    "index.html": "/index.html",
+    "main.4acd6f20.css.map": "/static/css/main.4acd6f20.css.map",
+    "main.c35661dc.js.map": "/static/js/main.c35661dc.js.map"
   },
   "entrypoints": [
     "static/css/main.4acd6f20.css",
