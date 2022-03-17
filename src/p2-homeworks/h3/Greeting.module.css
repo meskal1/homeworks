@@ -1,7 +1,18 @@
 .someClass {
-
+	display: inline-block;
+	margin: 10px 0px 10px 0px;
+	border: 1px solid black;
+	color: red;
+	border-radius: 5px;
 }
 
 .error {
-    border: 1px solid red;
+	border: 1px solid red;
+}
+
+input {
+	outline: none;
+}
+.nonstyle {
+	border: 1px solid green;
 }
