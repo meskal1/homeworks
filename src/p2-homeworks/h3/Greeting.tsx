@@ -13,17 +13,17 @@ type GreetingPropsType = {
 const Greeting: React.FC<GreetingPropsType> = (
 	{ name, setNameCallback, addUser, error, totalUsers } // деструктуризация пропсов
 ) => {
-	let inputClass = s.error // need to fix with (?:)
+	let inputClass = name ? s.nonstyle : s.error
 
 	const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
 		if (e.key === "Enter") addUser() // Если нажата клавиша Энтер, вызвать функцию нажатия на кнопку
 	};
 	return (
-		<div>
-			<div>
+		<div className={s.block}>
+			<div className={s.block_container}>
 				<input value={name} onChange={setNameCallback} className={inputClass} onKeyPress={onKeyPressHandler} />
 				<button onClick={addUser}>add</button>
-				<span >{totalUsers}</span>
+				<span >{'Total added users ' + totalUsers}</span>
 			</div>
 			<span className={s.someClass}>{error}</span>
 		</div>
