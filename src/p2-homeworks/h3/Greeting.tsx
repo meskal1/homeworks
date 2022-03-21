@@ -5,7 +5,7 @@ type GreetingPropsType = {
 	name: string
 	setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
 	addUser: () => void
-	error: string
+	error: string | null
 	totalUsers: number
 }
 
@@ -13,7 +13,7 @@ type GreetingPropsType = {
 const Greeting: React.FC<GreetingPropsType> = (
 	{ name, setNameCallback, addUser, error, totalUsers } // деструктуризация пропсов
 ) => {
-	let inputClass = name ? s.nonstyle : s.error
+	let inputClass = error ? s.error : s.nonstyle
 
 	const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
 		if (e.key === "Enter") addUser() // Если нажата клавиша Энтер, вызвать функцию нажатия на кнопку

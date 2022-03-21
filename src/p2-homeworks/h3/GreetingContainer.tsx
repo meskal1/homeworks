@@ -13,7 +13,7 @@ type GreetingContainerPropsType = {
 
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({ users, addUserCallback }) => { // деструктуризация пропсов
 	const [name, setName] = useState<string>('')
-	const [error, setError] = useState<string>('')
+	const [error, setError] = useState<string | null>(null)
 
 	const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
 		setName(e.currentTarget.value)
