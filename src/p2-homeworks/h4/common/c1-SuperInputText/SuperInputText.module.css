@@ -1,12 +1,37 @@
 .superInput {
-
+	background: #eaedf2;
+	border: none;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: #5e5a57;
+	height: 20px;
+	outline: none;
+	caret-color: #5e5a57;
+	border-radius: 13px;
+	box-shadow: inset 3px 4px 7px #cccfd4, inset -3px -4px 3px white;
+	margin: 0px 0px 10px 0px;
 }
-
+.superInput::placeholder {
+	color: #5e5a577c;
+	font-size: 12px;
+}
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+	background: #eaedf2;
+	border: none;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: #5e5a57;
+	height: 20px;
+	outline: none;
+	caret-color: #5e5a57;
+	border-radius: 13px;
+	box-shadow: inset 3px 4px 7px #e8afaf, inset -3px -4px 3px white;
+	margin: 0px 0px 10px 0px;
 }
-
+.errorInput::placeholder {
+	color: #5e5a577c;
+	font-size: 12px;
+}
 .error {
-    color: red;
+	color: red;
 }

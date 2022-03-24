@@ -1,7 +1,30 @@
 .default {
-
+	background: #eaedf2;
+	border: none;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: #5e5a57;
+	outline: none;
+	caret-color: #5e5a57;
+	border-radius: 13px;
+	box-shadow: inset 3px 4px 7px white, inset -3px -4px 3px #cccfd4;
+	margin: 0px 0px 10px 0px;
+	cursor: pointer;
+}
+.default:hover {
+	background: #a9acafa4;
+	box-shadow: inset 3px 4px 7px white, inset -3px -4px 7px white;
 }
 
 .red {
-    background: red;
+	background: #cccfd4;
+	margin: 0px 0px 10px 0px;
+	border: none;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: #5e5a57;
+	outline: none;
+	caret-color: #5e5a57;
+	border-radius: 13px;
+	cursor: pointer;
 }
