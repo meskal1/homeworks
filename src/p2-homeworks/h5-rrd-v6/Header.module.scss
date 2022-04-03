@@ -1,0 +1,11 @@
+.block_links{
+	display: inline-block;
+	transform: translate(-210px);
+	transition: all linear 0.3s;
+	:not(:last-child){
+		margin: 0px 20px 0px 0px;
+	}
+	&:hover{
+		transform: translate(10px);
+	}
+}
