@@ -1,13 +1,20 @@
-export const homeWorkReducer = (state: any, action: any): any => { // need to fix any
-    switch (action.type) {
-        case 'sort': {
-            // need to fix
-            return state
-        }
-        case 'check': {
-            // need to fix
-            return state
-        }
-        default: return state
-    }
+import { UserType } from "../HW8"
+
+export const homeWorkReducer = (
+	state: UserType[],
+	action: { type: string, payload: string | number }): UserType[] => {
+
+	switch (action.type) {
+		case 'sort': {
+			const newState = [...state];
+			if (action.payload === 'down') newState.sort((a, b) => a.age - b.age);
+			if (action.payload === 'up') newState.sort((a, b) => b.age - a.age);
+			return newState
+		}
+		case 'check': {
+			let newState = [...state].filter(el => el.age >= 18);
+			return newState
+		}
+		default: return state
+	}
 }
