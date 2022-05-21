@@ -7,7 +7,7 @@ type JuniorPlusType = {
 export const JuniorPlus: React.FC<JuniorPlusType> = ({ }) => {
 	return (
 		<>
-			Пусто
+			{/* <HW11 /> */}
 		</>
 	);
 };

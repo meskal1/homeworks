@@ -26,10 +26,8 @@ function Clock() {
 	const minutes = date.getMinutes();
 	const hours = date.getHours();
 	const seconds = date.getSeconds();
-	const month = date.getDay()
-	const day = date.getDate()
 	const stringTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`
-	const stringDate = `${day < 10 ? '0' + day : day}.${month < 10 ? '0' + month : month}.${date.getFullYear()}`
+	const stringDate = date.toLocaleDateString();
 
 	return (
 		<div>
