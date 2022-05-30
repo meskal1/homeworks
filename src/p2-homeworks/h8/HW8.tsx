@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { homeWorkReducer } from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './HW8.module.scss'
 
 export type UserType = {
 	_id: number
@@ -17,7 +18,7 @@ const initialPeople = [
 	{ _id: 5, name: 'Ирина', age: 55 },
 ]
 
-function HW8() {
+export const HW8 = () => {
 	const [people, setPeople] = useState<UserType[]>(initialPeople)
 
 	const finalPeople = people.map((p: {
@@ -25,7 +26,7 @@ function HW8() {
 		name: string
 		age: number
 	}) => (
-		<div key={p._id} style={{ display: 'flex', justifyContent: 'space-between', width: '250px' }}>
+		<div key={p._id} className={s.sort_list}>
 			<div>{p.name}</div>
 			<div>{p.age}</div>
 		</div>
@@ -42,22 +43,19 @@ function HW8() {
 	}
 
 	return (
-		<div style={{ background: '#EAEDF2', padding: '0 10px' }}>
-			<hr />
-			homeworks 8
-			{/*should work (должно работать)*/}
-			<div style={{ margin: '10px 0 15px 0' }}>{finalPeople}</div>
-			<div style={{ display: 'flex', gap: '15px' }}>
-				<SuperButton onClick={sortUp}>sort up</SuperButton>
-				<SuperButton onClick={sortDown}>sort down</SuperButton>
-				<SuperButton onClick={check}>check 18</SuperButton>
+		<>
+			<div>
+				<hr />
+				<div className={s.container}>
+					<div style={{ margin: "0 0 10px 0" }}>Homework 8</div>
+					{finalPeople}
+					<div style={{ display: "flex", justifyContent: "space-between" }}>
+						<SuperButton onClick={sortUp}>Sort up</SuperButton>
+						<SuperButton onClick={sortDown}>Sort down</SuperButton>
+						<SuperButton onClick={check}>Check 18</SuperButton>
+					</div>
+				</div>
 			</div>
-			<hr />
-			{/*для личного творчества, могу проверить*/}
-			{/*<AlternativePeople/>*/}
-			<hr />
-		</div>
+		</>
 	)
 }
-
-export default HW8

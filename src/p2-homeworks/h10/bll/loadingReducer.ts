@@ -1,8 +1,8 @@
 const initState = {
 	isLoading: false
 }
-export type InitialStateType = typeof initState
-export type ActionType = LoadingACType
+type InitialStateType = typeof initState
+type ActionType = LoadingACType
 export const loadingReducer = (state: InitialStateType = initState, action: ActionType): InitialStateType => {
 	switch (action.type) {
 		case 'LOADING_TRUE': {

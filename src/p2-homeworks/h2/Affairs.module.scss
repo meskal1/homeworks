@@ -1,0 +1,27 @@
+.block_hw2 {
+	font-size: 14px;
+	background: #eaedf2;
+	max-width: 200px;
+	width: 100%;
+	.sort_Buttons {
+		max-width: 200px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.sort_Buttons > * {
+		border: none;
+		background: #eaedf2;
+		padding: 5px 10px;
+		font-size: 13px;
+		color: #5e5a57;	
+		border-radius: 13px;
+		box-shadow: inset 3px 4px 7px white, inset -3px -4px 3px #cccfd4;
+		cursor: pointer;
+		&:active{
+		box-shadow: inset 3px 4px 7px #cccfd4, inset -3px -4px 3px white;
+		}
+		&:focus-visible{
+		outline: #5e5a57 1px solid;
+		}
+	}
+}

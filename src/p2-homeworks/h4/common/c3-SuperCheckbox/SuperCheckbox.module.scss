@@ -1,0 +1,9 @@
+.checkbox {
+	outline: none;
+	&:focus-visible{
+	outline: #5e5a57 1px solid;
+	}
+}
+.spanClassName {
+font-size: 14px;
+}

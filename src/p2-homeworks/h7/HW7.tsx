@@ -1,40 +1,32 @@
 import React, { useState } from 'react'
-import SuperSelect from './common/c5-SuperSelect/SuperSelect'
-import SuperRadio from './common/c6-SuperRadio/SuperRadio'
+import { SuperSelect } from './common/c5-SuperSelect/SuperSelect'
+import { SuperRadio } from './common/c6-SuperRadio/SuperRadio'
 
 const arr = ['x', 'y', 'z']
 
-function HW7() {
+export const HW7 = () => {
 	const [value, onChangeOption] = useState(arr[1])
 
 	return (
-		<div>
-			<hr />
-			homeworks 7
-
-			{/*should work (должно работать)*/}
+		<>
 			<div>
-				<SuperSelect
-					options={arr}
-					value={value}
-					onChangeOption={onChangeOption}
-					style={{ width: '85px' }} />
+				<hr />
+				<div style={{ display: "flex", justifyContent: "center", margin: "0 0 10px 0" }}>Homework 7</div>
+				<div style={{ display: "flex", justifyContent: "center", margin: "0 0 10px 0" }}>
+					<SuperSelect
+						options={arr}
+						value={value}
+						onChangeOption={onChangeOption}
+						style={{ width: '85px' }} />
+				</div>
+				<div style={{ display: "flex", justifyContent: "center" }}>
+					<SuperRadio
+						name={'radio'}
+						options={arr}
+						value={value}
+						onChangeOption={onChangeOption} />
+				</div>
 			</div>
-			<div>
-				<SuperRadio
-					name={'radio'}
-					options={arr}
-					value={value}
-					onChangeOption={onChangeOption} />
-			</div>
-
-			<hr />
-			{/*для личного творчества, могу проверить*/}
-			{/*<AlternativeSuperSelect/>*/}
-			{/*<AlternativeSuperRadio/>*/}
-			<hr />
-		</div>
+		</>
 	)
 }
-
-export default HW7

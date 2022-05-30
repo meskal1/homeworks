@@ -8,19 +8,15 @@ const messageData = {
 	time: '22:00',
 };
 
-function HW1() {
+const HW1 = () => {
 	return (
-		<div>
-			<hr />
-			homeworks 1<br />
-			<Message avatar={messageData.avatar} name={messageData.name} message={messageData.message} time={messageData.time} />
-
-			{/*<hr/>*/}
-			{/*для личного творчества, могу проверить*/}
-			{/*<AlternativeMessage/>*/}
-			{/*<hr/>*/}
-		</div>
+		<>
+			<div>
+				<hr />
+				<div style={{ display: "flex", justifyContent: "center" }}>Homework 1</div>
+				<Message avatar={messageData.avatar} name={messageData.name} message={messageData.message} time={messageData.time} />
+			</div>
+		</>
 	);
 }
-
-export default HW1;
+export default HW1

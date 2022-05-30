@@ -1,7 +1,7 @@
 .superInput {
 	background: #eaedf2;
 	border: none;
-	padding: 7px 10px;
+	padding: 4px 10px;
 	font-size: 14px;
 	color: #5e5a57;
 	height: 20px;
@@ -10,6 +10,9 @@
 	border-radius: 13px;
 	box-shadow: inset 3px 4px 7px #cccfd4, inset -3px -4px 3px white;
 	margin: 0px 0px 10px 0px;
+	&:focus{
+	box-shadow: inset 3px 4px 7px #acd3bd, inset -3px -4px 3px white;
+	}
 }
 .superInput::placeholder {
 	color: #5e5a577c;
@@ -18,7 +21,7 @@
 .errorInput {
 	background: #eaedf2;
 	border: none;
-	padding: 7px 10px;
+	padding: 4px 10px;
 	font-size: 14px;
 	color: #5e5a57;
 	height: 20px;
@@ -26,12 +29,14 @@
 	caret-color: #5e5a57;
 	border-radius: 13px;
 	box-shadow: inset 3px 4px 7px #e8afaf, inset -3px -4px 3px white;
-	margin: 0px 0px 10px 0px;
+	margin: 0px 0px 2px 0px;
 }
 .errorInput::placeholder {
 	color: #5e5a577c;
 	font-size: 12px;
 }
 .error {
+	align-self: flex-start;
 	color: red;
+	margin: 0px 0px 5px 0px;
 }

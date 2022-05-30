@@ -14,31 +14,32 @@ type GreetingContainerPropsType = {
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({ users, addUserCallback }) => { // деструктуризация пропсов
 	const [name, setName] = useState<string>('')
 	const [error, setError] = useState<string | null>(null)
+	let [totalUsers, setTotalUsers] = useState(0)
 
 	const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
 		setName(e.currentTarget.value)
-		if (e.currentTarget.value !== '') {
-			setError('')
-		}
+		if (e.currentTarget.value !== '') setError('')
 	}
+
 	const addUser = () => {
-		if (name === '') {
+		if (name.trim() === '') {
 			setError('Введите имя')
-		} else {
+		} else if (name.trim() !== '') {
 			setError('')
-			alert(`Hello ${name}!`);
-			addUserCallback(name);
+			alert(`Hello ${name.trim()}!`);
+			addUserCallback(name.trim());
 			setTotalUsers(++totalUsers);
 			setName('')
 		}
 	}
 
-	let [totalUsers, setTotalUsers] = useState(0)
-
 	return (
-		<Greeting name={name} setNameCallback={setNameCallback} addUser={addUser}
-			error={error} totalUsers={totalUsers} />
+		<Greeting
+			name={name}
+			setNameCallback={setNameCallback}
+			addUser={addUser}
+			error={error}
+			totalUsers={totalUsers} />
 	)
 }
-
 export default GreetingContainer

@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Affairs.module.css';
+import s from './Affair.module.scss';
 import { AffairType } from './HW2';
 
 type AffairPropsType = {
@@ -8,10 +8,12 @@ type AffairPropsType = {
 	deleteAffairCallback: (_id: number) => void
 }
 
-function Affair(props: AffairPropsType) {
+const Affair = (props: AffairPropsType) => {
+
 	const deleteCallback = () => {
 		props.deleteAffairCallback(props.affair._id)
 	}
+
 	return (
 		<div className={s.affair}>
 			<div className={s.name}>{props.affair.name}</div>
@@ -20,5 +22,4 @@ function Affair(props: AffairPropsType) {
 		</div>
 	)
 }
-
 export default Affair

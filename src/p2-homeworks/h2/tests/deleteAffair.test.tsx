@@ -4,12 +4,12 @@ let initialState: AffairType[]
 
 beforeEach(() => {
 	initialState = [
-		{ _id: 1, name: 'React', priority: 'high' },
-		{ _id: 2, name: 'anime', priority: 'low' },
-		{ _id: 3, name: 'games', priority: 'low' },
-		{ _id: 4, name: 'work', priority: 'high' },
-		{ _id: 5, name: 'html & css', priority: 'middle' },
-		{ _id: 6, name: 'porn', priority: 'low' },
+		{ _id: 1, name: 'React', priority: 'High' },
+		{ _id: 2, name: 'anime', priority: 'Low' },
+		{ _id: 3, name: 'games', priority: 'Low' },
+		{ _id: 4, name: 'work', priority: 'High' },
+		{ _id: 5, name: 'html & css', priority: 'Middle' },
+		{ _id: 6, name: 'porn', priority: 'Low' },
 	]
 })
 

@@ -2,7 +2,7 @@
 	display: inline-block;
 	height: 20px;
 	width: 170px;
-	padding: 7px 10px;
+	padding: 4px 10px;
 	margin: 0px 0px 10px 0px;
 	background: #eaedf2;
 	border: none;
@@ -12,14 +12,14 @@
 	caret-color: #5e5a57;
 	border-radius: 13px;
 	box-shadow: inset 3px 4px 7px white, inset -3px -4px 3px #cccfd4;
-	// box-shadow: inset 3px 4px 7px #cccfd4, inset -3px -4px 3px white;
 	cursor: pointer;
 	&::before{
 		content: '';
 		position: absolute;
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 		transform: translate(190px,-5px);
+		// border: 1px solid black;
 		background: url('https://w7.pngwing.com/pngs/953/524/png-transparent-paper-quill-inkwell-computer-icons-pen-ink-monochrome-black.png') 0 0/100% 100% no-repeat,#eaedf2;
 	}
 }

@@ -1,11 +1,18 @@
 .block_links{
 	display: inline-block;
-	transform: translate(-210px);
+	transform: translate(-215px);
 	transition: all linear 0.3s;
 	:not(:last-child){
 		margin: 0px 20px 0px 0px;
 	}
 	&:hover{
-		transform: translate(10px);
+		transform: translate(15px);
+		.transparent_text{
+			transition: all linear 0.3s;
+			opacity: 0;
+			}
+	}
+	.transparent_text{
+	transition: all linear 0.3s;
 	}
 }

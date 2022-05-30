@@ -1,5 +1,5 @@
 import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
-import s from './Greeting.module.css'
+import s from './Greeting.module.scss'
 
 type GreetingPropsType = {
 	name: string
@@ -11,8 +11,8 @@ type GreetingPropsType = {
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-	{ name, setNameCallback, addUser, error, totalUsers } // деструктуризация пропсов
-) => {
+	{ name, setNameCallback, addUser, error, totalUsers }) => {
+
 	let inputClass = error ? s.error : s.nonstyle
 
 	const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
@@ -21,13 +21,22 @@ const Greeting: React.FC<GreetingPropsType> = (
 	return (
 		<div className={s.block}>
 			<div className={s.block_container}>
-				<input value={name} onChange={setNameCallback} className={inputClass} onKeyPress={onKeyPressHandler} />
-				<button onClick={addUser}>add</button>
-				<span >{'Total added users ' + totalUsers}</span>
+				<div className={s.number_users}>
+					<span>Total added users {`<`}<a className={s.red}>{totalUsers}</a>{`>`}</span>
+				</div>
+				<div>
+					<input
+						className={inputClass}
+						value={name}
+						onChange={setNameCallback}
+						onKeyPress={onKeyPressHandler} />
+					<button
+						className={s.homework3_button}
+						onClick={addUser}>Add</button>
+				</div>
 			</div>
-			<span className={s.someClass}>{error}</span>
+			<span className={s.errorText}>{error}</span>
 		</div>
 	)
 }
-
 export default Greeting

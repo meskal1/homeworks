@@ -4,12 +4,12 @@ let initialState: AffairType[]
 
 beforeEach(() => {
 	initialState = [
-		{ _id: 1, name: 'React', priority: 'high' },
-		{ _id: 2, name: 'anime', priority: 'low' },
-		{ _id: 3, name: 'games', priority: 'low' },
-		{ _id: 4, name: 'work', priority: 'high' },
-		{ _id: 5, name: 'html & css', priority: 'middle' },
-		{ _id: 6, name: 'porn', priority: 'low' },
+		{ _id: 1, name: 'React', priority: 'High' },
+		{ _id: 2, name: 'anime', priority: 'Low' },
+		{ _id: 3, name: 'games', priority: 'Low' },
+		{ _id: 4, name: 'work', priority: 'High' },
+		{ _id: 5, name: 'html & css', priority: 'Middle' },
+		{ _id: 6, name: 'porn', priority: 'Low' },
 	]
 })
 
@@ -18,14 +18,14 @@ test('filter by all', () => {
 	expect(newState.length).toBe(6)
 })
 test('filter by high', () => {
-	const newState = filterAffairs(initialState, 'high')
+	const newState = filterAffairs(initialState, 'High')
 	expect(newState.length).toBe(2)
 })
 test('filter by middle', () => {
-	const newState = filterAffairs(initialState, 'middle')
+	const newState = filterAffairs(initialState, 'Middle')
 	expect(newState.length).toBe(1)
 })
 test('filter by low', () => {
-	const newState = filterAffairs(initialState, 'low')
+	const newState = filterAffairs(initialState, 'Low')
 	expect(newState.length).toBe(3)
 })

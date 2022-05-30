@@ -1,7 +1,8 @@
 import React, { MouseEvent, useState } from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './HW9.module.scss'
 
-function Clock() {
+export const Clock = () => {
 	const [timerId, setTimerId] = useState<number>(0)
 	const [date, setDate] = useState<Date>(new Date())
 	const [show, setShow] = useState<boolean>(false)
@@ -30,29 +31,17 @@ function Clock() {
 	const stringDate = date.toLocaleDateString();
 
 	return (
-		<div>
-			<div style={{ height: "50px" }}>
-				<div
-					onMouseEnter={onMouseEnter}
-					onMouseLeave={onMouseLeave}
-				>
-					{stringTime}
+		<>
+			<div className={s.container}>
+				<div className={s.clock}>
+					<div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>{stringTime}</div>
+					{show && (<div>{stringDate}</div>)}
 				</div>
-
-				{show && (
-					<div>
-						{stringDate}
-					</div>
-				)}
+				<div style={{ display: "flex", gap: "20px" }}>
+					<SuperButton onClick={start}>Start</SuperButton>
+					<SuperButton onClick={stop}>Stop</SuperButton>
+				</div>
 			</div>
-
-			<div style={{ display: "flex", gap: "20px" }}>
-				<SuperButton onClick={start}>start</SuperButton>
-				<SuperButton onClick={stop}>stop</SuperButton>
-			</div>
-
-		</div >
+		</>
 	)
 }
-
-export default Clock

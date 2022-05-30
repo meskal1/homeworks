@@ -1,21 +1,17 @@
 import React from 'react'
-import Clock from './Clock'
+import { Clock } from './Clock'
+import s from './HW9.module.scss'
 
-function HW9() {
+export const HW9 = () => {
 	return (
-		<div style={{ background: "#EAEDF2", padding: "0 0 0 10px" }}>
-			<hr />
-			homeworks 9
-
-			{/*should work (должно работать)*/}
-			<Clock />
-
-			<hr />
-			{/*для личного творчества, могу проверить*/}
-			{/*<AlternativeClock/>*/}
-			<hr />
-		</div>
+		<>
+			<div>
+				<hr />
+				<div className={s.main_container}>
+					<div style={{ margin: "0 0 10px 0" }}>Homework 9</div>
+					<Clock />
+				</div>
+			</div>
+		</>
 	)
 }
-
-export default HW9

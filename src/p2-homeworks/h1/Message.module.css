@@ -20,18 +20,18 @@
 }
 .message_block {
 	padding: 10px 15px;
-	background: #002200;
+	background: #002200b9;
 	display: flex;
 	flex: 0 1 100%;
-	border-radius: 5px;
+	border-radius: 5px 5px 5px 0;
 	justify-content: space-between;
 	column-gap: 15px;
 }
 .message_pic::before {
 	content: "";
 	position: absolute;
-	background: #002200;
-	width: 20px;
+	background: #002200b9;
+	width: 10px;
 	height: 9px;
 	transform: translate(55px, 41px);
 }
@@ -51,6 +51,7 @@
 .message_userMessage {
 	color: white;
 	word-break: break-all;
+	font-size: 15px;
 }
 .message_time {
 	color: rgba(255, 255, 255, 0.398);

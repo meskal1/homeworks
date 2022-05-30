@@ -10,14 +10,14 @@ export type AffairType = {
 	name: string
 	priority: string
 }
-export type FilterType = 'all' | 'high' | 'low' | 'middle' //AffairPriorityType
+export type FilterType = 'all' | 'High' | 'Low' | 'Middle' //AffairPriorityType
 
 const defaultAffairs: Array<AffairType> = [
-	{ _id: 1, name: 'React', priority: 'high' },
-	{ _id: 2, name: 'anime', priority: 'low' },
-	{ _id: 3, name: 'games', priority: 'low' },
-	{ _id: 4, name: 'work', priority: 'high' },
-	{ _id: 5, name: 'html & css', priority: 'middle' },
+	{ _id: 1, name: 'React', priority: 'High' },
+	{ _id: 2, name: 'Anime', priority: 'Low' },
+	{ _id: 3, name: 'Games', priority: 'Low' },
+	{ _id: 4, name: 'Work', priority: 'High' },
+	{ _id: 5, name: 'HTML & CSS', priority: 'Middle' },
 ]
 // pure helper functions
 //Возвращает отфильтрованный массив дел по приоритету
@@ -30,7 +30,7 @@ export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<Aff
 	return affairs.filter(a => a._id !== _id)
 }
 
-function HW2() {
+const HW2 = () => {
 	//Массив дел
 	const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs)
 	const [filter, setFilter] = useState<FilterType>('all')
@@ -39,21 +39,14 @@ function HW2() {
 	//Новый отрисованный массив после удаления дела(элемента)
 	const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
 
-	// console.log(deleteAffairCallback(2));
-	// console.log(filteredAffairs);
-
-
 	return (
-		<div>
-			<hr />
-			homework 2
-			{/*should work (должно работать)*/}
-			<Affairs data={filteredAffairs} setFilter={setFilter} deleteAffairCallback={deleteAffairCallback} />
-			<hr />
-			{/*для личного творчества, могу проверить*/}
-			{/*<AlternativeAffairs/>*/}
-			<hr />
-		</div>
+		<>
+			<div>
+				<hr />
+				<div style={{ display: "flex", justifyContent: "center" }}>Homework 2</div>
+				<Affairs data={filteredAffairs} setFilter={setFilter} deleteAffairCallback={deleteAffairCallback} />
+			</div>
+		</>
 	)
 }
 export default HW2

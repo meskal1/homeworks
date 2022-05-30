@@ -1,9 +1,9 @@
 import React from 'react'
 import { HashRouter } from 'react-router-dom'
-import Header from './Header'
-import Pages from './Pages'
+import { Header } from './Header'
+import { Pages } from './Pages'
 
-function HW5() {
+export const HW5 = () => {
 	return (
 		<div>
 			{/*в gh-pages лучше работает HashRouter*/}
@@ -14,4 +14,3 @@ function HW5() {
 		</div>
 	)
 }
-export default HW5

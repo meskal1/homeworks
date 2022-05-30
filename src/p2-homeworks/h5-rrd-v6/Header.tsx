@@ -1,19 +1,25 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './Header.module.scss'
+
 const isActiveStyle = {
 	textDecoration: 'none',
-	color: 'red'
+	color: 'red',
+	fontSize: '17px'
 };
-function Header() {
+const noneActive = {
+	color: 'black',
+	textDecoration: 'none'
+}
+
+export const Header = () => {
 	return (
-		<div className={s.block_links}>
-			<NavLink to="/pre-junior" className={s.qwe} style={({ isActive }) => isActive ? isActiveStyle : {}}>pre-junior</NavLink>
-			<NavLink to="/junior" className={s.qew} style={({ isActive }) => isActive ? isActiveStyle : {}}>junior</NavLink>
-			<NavLink to="/junior+" className={s.qew} style={({ isActive }) => isActive ? isActiveStyle : {}}>junior+</NavLink>
+		<div className={s.block_links} style={{ textDecoration: "none" }}>
+			<NavLink to="/pre-junior" style={({ isActive }) => isActive ? isActiveStyle : noneActive}>Pre-junior</NavLink>
+			<NavLink to="/junior" style={({ isActive }) => isActive ? isActiveStyle : noneActive}>Junior</NavLink>
+			<NavLink to="/junior+" style={({ isActive }) => isActive ? isActiveStyle : noneActive}>Junior+</NavLink>
 			<span>Navigation</span>
+			<span className={s.transparent_text}>&larr;------------- Homework 5</span>
 		</div>
 	)
 }
-
-export default Header

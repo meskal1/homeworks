@@ -4,10 +4,9 @@ import s from './SuperPuperDoubleRange.module.scss'
 type SuperPuperDoubleRangeType = {
 	min: number
 	max: number
-	onChange: ({ min, max }: { min: number, max: number }) => void
 }
 
-export const SuperPuperDoubleRange: React.FC<SuperPuperDoubleRangeType> = ({ min, max, onChange }) => {
+export const SuperPuperDoubleRange: React.FC<SuperPuperDoubleRangeType> = ({ min, max }) => {
 	const [minVal, setMinVal] = useState(min);
 	const [maxVal, setMaxVal] = useState(max);
 	const minValRef = useRef(min);
@@ -41,13 +40,8 @@ export const SuperPuperDoubleRange: React.FC<SuperPuperDoubleRangeType> = ({ min
 		}
 	}, [maxVal, getPercent]);
 
-	// Get min and max values when their state changes
-	useEffect(() => {
-		onChange({ min: minVal, max: maxVal });
-	}, [minVal, maxVal, onChange]);
-
 	return (
-		<div className="container">
+		<div className={s.container2}>
 			<input
 				type="range"
 				min={min}

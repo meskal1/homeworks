@@ -24,9 +24,6 @@ export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({
 		onChangeRange && onChangeRange(
 			[e.currentTarget.id === 'input1' ? currentValue : value[0],
 			(e.currentTarget.id === 'input2') && (value[0] <= currentValue) ? currentValue : value[1]])
-		// onChangeRange && onChangeRange(
-		// 	[e.currentTarget.id === 'input1' ? currentValue : value[0],
-		// 	e.currentTarget.id === 'input2' ? currentValue : value[1]])
 	}
 
 	return (

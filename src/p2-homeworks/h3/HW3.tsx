@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 import { v1 } from 'uuid'
 import GreetingContainer from './GreetingContainer'
-import s from './Greeting.module.css'
+import s from './Greeting.module.scss'
 
-// types
 export type UserType = {
 	_id: string
 	name: string
 }
 
-// уровень работы с глобальными данными
-function HW3() {
+const HW3 = () => {
 	const [users, setUsers] = useState<UserType[]>([])
 
 	const addUserCallback = (name: string) => {
@@ -18,25 +16,20 @@ function HW3() {
 	}
 
 	return (
-		<div>
-			<hr />
-			homeworks 3
-
-			{/*should work (должно работать)*/}
-			<div className={s.asd}>
-				<GreetingContainer users={users} addUserCallback={addUserCallback} />
-				{users.map(a => {
-					return (
-						<div key={a._id}>{a.name}</div>
-					)
-				})}
+		<>
+			<div>
+				<hr />
+				<div style={{ display: "flex", justifyContent: "center" }}>Homework 3</div>
+				<div className={s.homework3}>
+					<GreetingContainer users={users} addUserCallback={addUserCallback} />
+					{users.map(a => {
+						return (
+							<div className={s.listOfAddedUsers} key={a._id}>{a.name}</div>
+						)
+					})}
+				</div>
 			</div>
-			<hr />
-			{/*для личного творчества, могу проверить*/}
-			{/*<AlternativeGreeting/>*/}
-			<hr />
-		</div>
+		</>
 	)
 }
-
 export default HW3
