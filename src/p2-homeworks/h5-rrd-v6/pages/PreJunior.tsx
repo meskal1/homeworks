@@ -6,15 +6,15 @@ import HW4 from '../../h4/HW4'
 import HW6 from '../../h6/HW6'
 
 export const PreJunior = () => {
-	return (
-		<div>
-			<HW1 />
-			<HW2 />
-			<HW3 />
-			<HW4 />
-			<HW6 />
-		</div>
-	)
+  return (
+    <div>
+      <HW1 />
+      <HW2 />
+      <HW3 />
+      <HW4 />
+      <HW6 />
+    </div>
+  )
 }
 
 // сделайте по аналогии пустые страницы джун и джун+
