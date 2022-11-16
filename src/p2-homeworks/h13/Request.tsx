@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import s from './Request.module.scss'
 import { RequestsAPI } from './RequestsAPI'
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
 type RequestType = {}
 
@@ -33,11 +34,12 @@ export const Request: React.FC<RequestType> = () => {
     <>
       <hr />
       <div className={s.content}>
+        <p>Homework 13</p>
         <input type='checkbox' checked={checkboxState} onChange={onChangeInputHandler} />
-        <span>Статус отправки: {sendStatus}</span>
-        <button className={s.button} onClick={onClickButtonHandler} disabled={isPending}>
+        <p>Статус отправки: {sendStatus}</p>
+        <SuperButton onClick={onClickButtonHandler} red={!isPending} disabled={isPending}>
           Отправить запрос
-        </button>
+        </SuperButton>
       </div>
       <hr />
     </>
