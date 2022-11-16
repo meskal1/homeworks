@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import s from './Request.module.scss'
 import { RequestsAPI } from './RequestsAPI'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import style from '../../p1-main/m1-ui/u1-app/App.module.scss'
 
 type RequestType = {}
 
@@ -32,16 +33,16 @@ export const Request: React.FC<RequestType> = () => {
 
   return (
     <>
-      <hr />
-      <div className={s.content}>
+      <div className={style.hwContainer}>
         <p>Homework 13</p>
-        <input type='checkbox' checked={checkboxState} onChange={onChangeInputHandler} />
-        <p>Статус отправки: {sendStatus}</p>
-        <SuperButton onClick={onClickButtonHandler} red={!isPending} disabled={isPending}>
-          Отправить запрос
-        </SuperButton>
+        <div className={s.content}>
+          <input type='checkbox' checked={checkboxState} onChange={onChangeInputHandler} />
+          <p>Статус отправки: {sendStatus}</p>
+          <SuperButton onClick={onClickButtonHandler} red={!isPending} disabled={isPending}>
+            Отправить запрос
+          </SuperButton>
+        </div>
       </div>
-      <hr />
     </>
   )
 }

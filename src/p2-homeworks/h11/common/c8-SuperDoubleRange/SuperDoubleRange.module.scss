@@ -1,26 +1,26 @@
-.input1{
-		-webkit-appearance: none;
-		width: 129px;
-		height: 8px;
-		box-shadow: inset 0px 0px 0px 1px #B2B2B2;
-		border-radius: 5px;
-		position: relative;
-		z-index: 2;
-		&:hover{
-			box-shadow: inset 0px 0px 0px 1px #999999;
-			background-color: #E5E5E5;
-		}
+.input1 {
+  -webkit-appearance: none;
+  width: 129px;
+  height: 8px;
+  box-shadow: inset 0px 0px 0px 1px #b2b2b2;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 1px #999999;
+    background-color: #e5e5e5;
+  }
 }
-.input2{
-	position: absolute;
-	z-index: 3;
-	left: 30px;
-	transform: translate(0px,-1000px);
-	&::-webkit-slider-thumb{
-		-webkit-appearance: none;
-		transform: translate(0px,1001.2px);
-		height: 15.5px;
-		width: 15.5px;
-		border-radius: 50%;
+.input2 {
+  position: absolute;
+  z-index: 3;
+  left: 30px;
+  transform: translate(0px, -1000px);
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    transform: translate(0px, 1001.2px);
+    height: 15.5px;
+    width: 15.5px;
+    border-radius: 50%;
   }
 }
